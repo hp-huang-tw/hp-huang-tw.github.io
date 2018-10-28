@@ -1,0 +1,12 @@
+{
+  "name": "hp-huang.github.io",
+  "private": true,
+  "license": "UNLICENSE",
+  "author": "hp.huang <stitchmos@gmail.com>",
+  "scripts": {
+    "dev": "nuxt"
+  },
+  "dependencies": {
+    "nuxt": "^2.2.0"
+  }
+}

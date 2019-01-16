@@ -1,27 +1,19 @@
-language: node_js
-node_js:
-  - "8"
-
-cache:
-  directories:
-    - "node_modules"
-
-branches:
-  only:
-  - pre-release
+language: go
 
 install:
-  - npm install
-  - npm run generate
+    - go get github.com/gohugoio/hugo
+
+before_script:
+  - rm -rf public 2> /dev/null
 
 script:
-  - echo "Skipping tests"
+  - hugo -t tale
 
 deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_ACCESS_TOKEN
   target-branch: master
-  local-dir: dist
+  local-dir: public
   on:
     branch: pre-release

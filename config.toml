@@ -1,5 +1,11 @@
-theme = "tale"
+theme = "hugo-theme-minos"
 baseURL = "https://hp-huang-tw.github.io"
 languageCode = "en-us"
-title = "hp.huang.io"
+title = "hp.huang"
+
+# for tale theme
 googleAnalytics = "UA-131697392-1"
+
+[params]
+  AuthorName = "hp.huang"
+  googleAnalytics = "UA-131697392-1"

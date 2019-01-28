@@ -7,7 +7,7 @@ before_script:
   - rm -rf public 2> /dev/null
 
 script:
-  - hugo -t tale
+  - hugo
 
 deploy:
   provider: pages

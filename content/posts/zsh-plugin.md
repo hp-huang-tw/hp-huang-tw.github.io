@@ -3,6 +3,8 @@ title: "Useful Zsh Plugin"
 author: "hp.huang"
 date: 2019-01-28T00:11:51+08:00
 draft: false
+categories: [shell]
+tags: [shell,zsh]
 ---
 
 ## 1. [Auto Suggestion](https://github.com/zsh-users/zsh-autosuggestions)

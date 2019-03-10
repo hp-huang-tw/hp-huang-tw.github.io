@@ -1,5 +1,6 @@
 ---
 title: "Redis Notes"
+author: "hp.huang"
 date: 2019-03-04T23:17:50+08:00
 draft: false
 categories: [database]

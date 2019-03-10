@@ -1,9 +1,11 @@
-+++
-title="Add Google Analytics in Hugo"
-date="2019-01-16"
-author="hp.huang"
-draft=false
-+++
+---
+title: "Add Google Analytics in Hugo"
+date: "2019-01-16"
+author: "hp.huang"
+draft: false
+categories: [hugo]
+tags: [hugo,ga]
+---
 
 > This is an example for tracking the pageview of Hugo blog which theme is [hugo tale](https://themes.gohugo.io/tale-hugo/)
 

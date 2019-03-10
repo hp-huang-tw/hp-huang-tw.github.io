@@ -1,5 +1,6 @@
 ---
 title: "Mycli - productive mysql command line client"
+author: "hp.huang"
 date: 2019-03-10T16:59:28+08:00
 draft: false
 categories: [database]

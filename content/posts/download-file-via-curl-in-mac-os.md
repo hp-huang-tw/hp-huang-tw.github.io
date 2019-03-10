@@ -3,6 +3,8 @@ title: "Download File via Curl in Mac OS"
 author: "hp.huang"
 date: 2019-01-28T15:40:04+08:00
 draft: false
+categories: [shell]
+tags: [shell, curl]
 ---
 
 在GNU環境裡常用的下載檔案軟體為 `Wget`,

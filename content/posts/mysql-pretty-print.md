@@ -1,6 +1,7 @@
 ---
 title: "MySQL Pretty Print in Command Line"
 date: 2019-03-10T18:16:43+08:00
+author: "hp.huang"
 draft: false
 categories: [database]
 tags: [mysql,sql]

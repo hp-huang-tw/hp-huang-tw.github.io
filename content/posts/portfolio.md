@@ -1,7 +1,10 @@
 ---
 title: "Portfolio"
 date: 2019-01-01T20:14:34+08:00
+author: "hp.huang"
 draft: false
+categories: [frontend]
+tags: [frontend,html,css,sass,javascript,php,mysql,rwd]
 ---
 
 ### [NCU Computer Center](https://www.cc.ncu.edu.tw/)

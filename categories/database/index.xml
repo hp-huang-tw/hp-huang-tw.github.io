@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>database on hp.huang</title>
+    <link>https://hp-huang-tw.github.io/categories/database/</link>
+    <description>Recent content in database on hp.huang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Mar 2019 18:16:43 +0800</lastBuildDate>
+    
+	<atom:link href="https://hp-huang-tw.github.io/categories/database/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MySQL Pretty Print in Command Line</title>
+      <link>https://hp-huang-tw.github.io/posts/mysql-pretty-print/</link>
+      <pubDate>Sun, 10 Mar 2019 18:16:43 +0800</pubDate>
+      
+      <guid>https://hp-huang-tw.github.io/posts/mysql-pretty-print/</guid>
+      <description>Introduction By default, the output of mysql in the console may be ugly when the screen is too small or the count of fields are large in the table. see the figure.
+There are 2 alternative to prettify the output in the console.
+1. Display Records Vertically use \G option rather than ;.
+SELECL * FROM user\G 2. Using Pager pager less -SFX SELECL * FROM user; Advanced
+Mysql provides user-specifc options file which allows mysql client read user&#39;s default configuration when connecting to mysql server.</description>
+    </item>
+    
+    <item>
+      <title>Mycli - productive mysql command line client</title>
+      <link>https://hp-huang-tw.github.io/posts/mysql-mycli/</link>
+      <pubDate>Sun, 10 Mar 2019 16:59:28 +0800</pubDate>
+      
+      <guid>https://hp-huang-tw.github.io/posts/mysql-mycli/</guid>
+      <description>As I know there are two MySQL client:
+ MySQL workbench is a GUI client which is developed by official. mycli is a terminal client which is an open source &amp;amp; developed by python.  There are two reasons why I choose mycli as my primary MySQL client:
+ I prefer to use command line interface mycli supports auto-completion and syntax highlighting  Brief Usage $ mycli --help Usage: mycli [OPTIONS] [DATABASE] A MySQL terminal client with auto-completion and syntax highlighting.</description>
+    </item>
+    
+    <item>
+      <title>Redis Notes</title>
+      <link>https://hp-huang-tw.github.io/posts/redis-notes/</link>
+      <pubDate>Mon, 04 Mar 2019 23:17:50 +0800</pubDate>
+      
+      <guid>https://hp-huang-tw.github.io/posts/redis-notes/</guid>
+      <description>Installation brew install redis Redis-cli redis-cli is the Redis command line interface which allow you interact with redis server see on offcial site
+connect to server redis-cli -h yourHost -p yourPort # enable cluster mode redis-cli -c -h yourHost -p yourPort all usage Usage: redis-cli [OPTIONS] [cmd [arg [arg ...]]] -h &amp;lt;hostname&amp;gt; Server hostname (default: 127.0.0.1) -p &amp;lt;port&amp;gt; Server port (default: 6379) -s &amp;lt;socket&amp;gt; Server socket (overrides hostname and port) -a &amp;lt;password&amp;gt; Password to use when connecting to the server -r &amp;lt;repeat&amp;gt; Execute specified command N times -i &amp;lt;interval&amp;gt; When -r is used, waits &amp;lt;interval&amp;gt; seconds per command.</description>
+    </item>
+    
+  </channel>
+</rss>

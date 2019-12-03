@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nosql on hp.huang</title>
+    <link>https://hp-huang-tw.github.io/tags/nosql/</link>
+    <description>Recent content in nosql on hp.huang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 04 Mar 2019 23:17:50 +0800</lastBuildDate>
+    
+	<atom:link href="https://hp-huang-tw.github.io/tags/nosql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Redis Notes</title>
+      <link>https://hp-huang-tw.github.io/posts/redis-notes/</link>
+      <pubDate>Mon, 04 Mar 2019 23:17:50 +0800</pubDate>
+      
+      <guid>https://hp-huang-tw.github.io/posts/redis-notes/</guid>
+      <description>Installation brew install redis Redis-cli redis-cli is the Redis command line interface which allow you interact with redis server see on offcial site
+connect to server redis-cli -h yourHost -p yourPort # enable cluster mode redis-cli -c -h yourHost -p yourPort all usage Usage: redis-cli [OPTIONS] [cmd [arg [arg ...]]] -h &amp;lt;hostname&amp;gt; Server hostname (default: 127.0.0.1) -p &amp;lt;port&amp;gt; Server port (default: 6379) -s &amp;lt;socket&amp;gt; Server socket (overrides hostname and port) -a &amp;lt;password&amp;gt; Password to use when connecting to the server -r &amp;lt;repeat&amp;gt; Execute specified command N times -i &amp;lt;interval&amp;gt; When -r is used, waits &amp;lt;interval&amp;gt; seconds per command.</description>
+    </item>
+    
+  </channel>
+</rss>

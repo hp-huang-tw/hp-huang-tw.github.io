@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redis Notes // hp.huang</title>
+
+        <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+        <meta property="og:title" content="Redis Notes" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://hp-huang-tw.github.io/posts/redis-notes/" />
+    
+
+    <link href="" rel="alternate" type="application/rss+xml" title="hp.huang" />
+    <link rel="shortcut icon" href="/favicon.png">
+
+    <link href="https://hp-huang-tw.github.io/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="https://hp-huang-tw.github.io/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://hp-huang-tw.github.io/css/style.css">
+
+    <meta name="generator" content="Hugo 0.61.0-DEV" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" href="https://hp-huang-tw.github.io">hp.huang</a>
+            <nav id="main-nav">
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Redis Notes</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/posts/redis-notes/" class="article-date">
+                <time datetime='2019-03-04T23:17:50.000&#43;08:00' itemprop="datePublished">2019-03-04</time>
+            </a>
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="https://hp-huang-tw.github.io/categories/database">database</a>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="installation">Installation</h1>
+<pre><code>brew install redis
+</code></pre><h1 id="redis-cli">Redis-cli</h1>
+<p>redis-cli is the Redis command line interface which allow you interact with redis server see on <a href="https://redis.io/topics/rediscli">offcial site</a></p>
+<h2 id="connect-to-server">connect to server</h2>
+<pre><code>redis-cli -h yourHost -p yourPort
+
+# enable cluster mode
+redis-cli -c -h yourHost -p yourPort
+</code></pre><h2 id="all-usage">all usage</h2>
+<pre><code>Usage: redis-cli [OPTIONS] [cmd [arg [arg ...]]]
+  -h &lt;hostname&gt;    Server hostname (default: 127.0.0.1)
+  -p &lt;port&gt;        Server port (default: 6379)
+  -s &lt;socket&gt;      Server socket (overrides hostname and port)
+  -a &lt;password&gt;    Password to use when connecting to the server
+  -r &lt;repeat&gt;      Execute specified command N times
+  -i &lt;interval&gt;    When -r is used, waits &lt;interval&gt; seconds per command.
+                   It is possible to specify sub-second times like -i 0.1
+  -n &lt;db&gt;          Database number
+  -x               Read last argument from STDIN
+  -d &lt;delimiter&gt;   Multi-bulk delimiter in for raw formatting (default: \n)
+  -c               Enable cluster mode (follow -ASK and -MOVED redirections)
+  --raw            Use raw formatting for replies (default when STDOUT is not a tty)
+  --latency        Enter a special mode continuously sampling latency
+  --slave          Simulate a slave showing commands received from the master
+  --rdb &lt;filename&gt; Transfer an RDB dump from remote server to local file.
+  --pipe           Transfer raw Redis protocol from stdin to server
+  --bigkeys        Sample Redis keys looking for big keys
+  --eval &lt;file&gt;    Send an EVAL command using the Lua script at &lt;file&gt;
+  --help           Output this help and exit
+  --version        Output version and exit
+
+Examples:
+  cat /etc/passwd | redis-cli -x set mypasswd
+  redis-cli get mypasswd
+  redis-cli -r 100 lpush mylist x
+  redis-cli -r 100 -i 1 info | grep used_memory_human:
+  redis-cli --eval myscript.lua key1 key2 , arg1 arg2 arg3
+  (Note: when using --eval the comma separates KEYS[] from ARGV[] items)
+
+When no command is given, redis-cli starts in interactive mode.
+Type &quot;help&quot; in interactive mode for information on available commands.
+</code></pre><h1 id="data-types">Data Types</h1>
+<p>to be continued&hellip;</p>
+<h2 id="redis-persistence">Redis Persistence</h2>
+<p>When using redis as <code>primary data store</code>, how to do the backup mechanism for data becomes very important. Redis prodvides two kind pesistence options: <code>RDB</code> and <code>AOF</code>. see more on <a href="https://redis.io/topics/persistence">offical site</a></p>
+<h1 id="redis-cluster">Redis Cluster</h1>
+<p>see <a href="https://redis.io/topics/cluster-spec">specification</a></p>
+<h1 id="other">Other</h1>
+<ul>
+<li>Redis Cheetsheet
+<ul>
+<li><a href="https://www.cheatography.com/tasjaevan/cheat-sheets/redis/">https://www.cheatography.com/tasjaevan/cheat-sheets/redis/</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+
+        
+        
+        <div class="article-toc" >
+            <h3>Contents</h3>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#connect-to-server">connect to server</a></li>
+    <li><a href="#all-usage">all usage</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#redis-persistence">Redis Persistence</a></li>
+  </ul>
+</nav>
+        </div>
+        
+        
+
+        
+
+
+        
+        <footer class="article-footer">
+            <ul class="article-tag-list">
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="https://hp-huang-tw.github.io/tags/redis">redis
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="https://hp-huang-tw.github.io/tags/nosql">nosql
+                    </a>
+                </li>
+                
+            </ul>
+        </footer>
+        
+    </div>
+    <nav id="article-nav">
+    
+    <a href="/posts/mysql-mycli/" id="article-nav-newer" class="article-nav-link-wrap">
+        <div class="article-nav-title"><span>&lt;</span>&nbsp;
+            Mycli - productive mysql command line client
+        </div>
+    </a>
+    
+    
+    <a href="/posts/download-file-via-curl-in-mac-os/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Download File via Curl in Mac OS&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+
+</article>
+
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2019 hp.huang
+            <br />
+            Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/carsonip/hugo-theme-minos" target="_blank">Minos</a>
+        </div>
+    </div>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-131697392-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+
+</div>
+</body>
+</html>

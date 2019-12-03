@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ga on hp.huang</title>
+    <link>https://hp-huang-tw.github.io/tags/ga/</link>
+    <description>Recent content in ga on hp.huang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://hp-huang-tw.github.io/tags/ga/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Add Google Analytics in Hugo</title>
+      <link>https://hp-huang-tw.github.io/posts/add-google-analytics-in-hugo/</link>
+      <pubDate>Wed, 16 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hp-huang-tw.github.io/posts/add-google-analytics-in-hugo/</guid>
+      <description>This is an example for tracking the pageview of Hugo blog which theme is hugo tale
+ Getting Started   add tracking code in config.toml googleAnalytics = &amp;#34;UA-XXX-X&amp;#34;
+  for home page, add Hugo&#39;s interanl google analytics template in layouts/partials/index/introduction.html mkdir layouts &amp;amp;&amp;amp; cd layouts mkdir partials &amp;amp;&amp;amp; cd partials mkdir index &amp;amp;&amp;amp; cd index echo &amp;#34;{{ template \&amp;#34;_internal/google_analytics_async.html\&amp;#34; . }}&amp;#34; &amp;gt; introduction.html
+  for post page, add Hugo&#39;s interanl google analytics template in layouts/partials/single/header.</description>
+    </item>
+    
+  </channel>
+</rss>

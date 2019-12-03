@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mycli - productive mysql command line client // hp.huang</title>
+
+        <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+        <meta property="og:title" content="Mycli - productive mysql command line client" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://hp-huang-tw.github.io/posts/mysql-mycli/" />
+    
+
+    <link href="" rel="alternate" type="application/rss+xml" title="hp.huang" />
+    <link rel="shortcut icon" href="/favicon.png">
+
+    <link href="https://hp-huang-tw.github.io/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="https://hp-huang-tw.github.io/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://hp-huang-tw.github.io/css/style.css">
+
+    <meta name="generator" content="Hugo 0.61.0-DEV" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" href="https://hp-huang-tw.github.io">hp.huang</a>
+            <nav id="main-nav">
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Mycli - productive mysql command line client</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/posts/mysql-mycli/" class="article-date">
+                <time datetime='2019-03-10T16:59:28.000&#43;08:00' itemprop="datePublished">2019-03-10</time>
+            </a>
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="https://hp-huang-tw.github.io/categories/database">database</a>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <p>As I know there are two MySQL client:</p>
+<ul>
+<li><a href="https://www.mysql.com/products/workbench/">MySQL workbench</a> is a GUI client which is developed by official.</li>
+<li><a href="https://github.com/dbcli/mycli">mycli</a> is a terminal client which is an open source &amp; developed by python.</li>
+</ul>
+<p>There are two reasons why I choose <code>mycli</code> as my primary MySQL client:</p>
+<ol>
+<li>I prefer to use command line interface</li>
+<li>mycli supports <code>auto-completion</code> and <code>syntax highlighting</code></li>
+</ol>
+<h2 id="brief-usage">Brief Usage</h2>
+<pre><code>$ mycli --help
+Usage: mycli [OPTIONS] [DATABASE]
+
+  A MySQL terminal client with auto-completion and syntax highlighting.
+
+  Examples:
+    - mycli my_database
+    - mycli -u my_user -h my_host.com my_database
+    - mycli mysql://my_user@my_host.com:3306/my_database
+
+Options:
+  -h, --host TEXT               Host address of the database.
+  -P, --port INTEGER            Port number to use for connection. Honors
+                                $MYSQL_TCP_PORT.
+  -u, --user TEXT               User name to connect to the database.
+  -p, --password TEXT           Password to connect to the database.
+  -d, --dsn TEXT                Use DSN configured into the [alias_dsn]
+                                section of myclirc file.
+  --list-dsn                    list of DSN configured into the [alias_dsn]
+                                section of myclirc file.
+</code></pre><h2 id="configuration">Configuration</h2>
+<ul>
+<li>the location of configuration file is at <code>~/.myclirc</code></li>
+</ul>
+<h3 id="setup-dsn">Setup <code>DSN</code></h3>
+<p>Development process may include different phase such as local, beta, production, it means there are lots of mysql server host need to remember.</p>
+<p>It will be useful if setting up <code>alias_dsn</code> in the config. After that we can use <code>-d</code> option to connect to correspond server quickly.</p>
+<p>for example:</p>
+<pre><code>[alias_dsn]
+local = mysql://[user[:password]@][localhost][:port][/dbname]
+beta = mysql://[user[:password]@][betahost][:port][/dbname]
+production = mysql://[user[:password]@][productionhost][:port][/dbname]
+</code></pre><p>The correspond usage of mycli will be:</p>
+<pre><code>mycli -d local
+mycli -d beta
+mycli -d production
+</code></pre>
+        </div>
+
+        
+        
+        <div class="article-toc" >
+            <h3>Contents</h3>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#brief-usage">Brief Usage</a></li>
+    <li><a href="#configuration">Configuration</a>
+      <ul>
+        <li><a href="#setup-dsn">Setup DSN</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+        
+        
+
+        
+
+
+        
+        <footer class="article-footer">
+            <ul class="article-tag-list">
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="https://hp-huang-tw.github.io/tags/mysql">mysql
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="https://hp-huang-tw.github.io/tags/sql">sql
+                    </a>
+                </li>
+                
+            </ul>
+        </footer>
+        
+    </div>
+    <nav id="article-nav">
+    
+    <a href="/posts/mysql-pretty-print/" id="article-nav-newer" class="article-nav-link-wrap">
+        <div class="article-nav-title"><span>&lt;</span>&nbsp;
+            MySQL Pretty Print in Command Line
+        </div>
+    </a>
+    
+    
+    <a href="/posts/redis-notes/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Redis Notes&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+
+</article>
+
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2019 hp.huang
+            <br />
+            Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with theme <a href="https://github.com/carsonip/hugo-theme-minos" target="_blank">Minos</a>
+        </div>
+    </div>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-131697392-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+
+</div>
+</body>
+</html>
